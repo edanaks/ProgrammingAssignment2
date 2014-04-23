@@ -4,9 +4,15 @@
 ## 1) makeCacheMatrix: creates a "special" matrix object suitable for caching
 ## inverses
 ## 2) cacheSolve: retrieves inverse from cache, or updates cache if none found.
+##
+## Acknowledgements: 
+## Content is largely modelled over the functions makeVector and
+## cacheMean provided in the original assignment description.
+##
 
 
 ################################################################################
+
 
 ## ===============
 ## makeCacheMatrix
@@ -66,8 +72,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ## Inverse of matrix
 
 cacheSolve <- function(x, ...) {
-	## Return a matrix that is the inverse of 'x'
-	i <- x$getinverse()
+    ## Return a matrix that is the inverse of 'x'
+    i <- x$getinverse()
     if(!is.null(i)) {
         message("getting cached inverse")
         return(i)
